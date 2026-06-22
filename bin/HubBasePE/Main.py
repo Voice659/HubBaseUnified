@@ -24,11 +24,10 @@ def Setup_HubBase():  # (11.06.2026)
     prList = {1: Programm1, 2: Programm2, 3: Programm3, 4: Programm4, 5: Programm5, 6: Programm6, 7: Programm7,
               8: Programm8, 9: Programm9, 10: Programm10, 11: Programm11, 12: Programm12, 13: Programm13,
               14: Programm14, 15: Programm15, 16: Programm16, 17: Programm17, 18: Programm18, 19: Programm19,
-              20: Programm20, 21: Main.ProgrammP1, 22: Main.ProgrammP2, 23: Main.ProgrammP3, 24: Main.ProgrammP4,
-              25: Main.ProgrammP5}
+              20: Programm20, 21: ProgrammP1, 22: ProgrammP2, 23: ProgrammP3, 24: ProgrammP4,
+              25: ProgrammP5}
     prNum = 25
-    pprList = {21: Main.ProgrammP1, 22: Main.ProgrammP2, 23: Main.ProgrammP3, 24: Main.ProgrammP4,
-               25: Main.ProgrammP5}
+    pprList = {21: ProgrammP1, 22: ProgrammP2, 23: ProgrammP3, 24: ProgrammP4, 25: ProgrammP5}
     pprNum = 5
 
 

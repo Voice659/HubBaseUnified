@@ -43,38 +43,6 @@ def ProgrammCycle(ProgrammNumber: int, programmList: dict, TransitionMethod, Tra
             break
 
 
-try:  # HBPE automator
-    from HubBasePE import Main
-
-    try:
-        PE__version__ = Main.__version__
-        print(f"Your HubBase version: {__version__}, your HubBasePE version: {PE__version__}")
-        if PE__version__ > __version__:
-            print("Warning: You are using an outdated(to HubBasePE) version of HubBase. This may cause bugs.")
-        if PE__version__ < __version__:
-            print("Warning: HubBasePE is outdated")
-            print(f"Your HubBase version: {__version__}, your HubBasePE version: {PE__version__}")
-            hbpeInstall = input("Do you want to upgrade HubBasePE?[Y/N] -- ").upper()
-            if hbpeInstall == "Y":
-                subprocess.run([sys.executable, "-m", "pip", "install", f"HubBasePE=={__version2__}"])
-                PlPr = "Y"
-        if PE__version__ == __version__:
-            print("All checks pass")
-    except AttributeError:
-        print("Warning: HubBasePE is outdated")
-        print(f"Your HubBase version: {__version__}, your HubBasePE version: Unknown (< 0.0.2.0.04)")
-        hbpeInstall = input("Do you want to upgrade HubBasePE?[Y/N] -- ").upper()
-        if hbpeInstall == "Y":
-            subprocess.run([sys.executable, "-m", "pip", "install", f"HubBasePE=={__version2__}"])
-            PlPr = "Y"
-except ImportError:
-    print("Error: HubBasePE not installed.")
-    hbpeInstall = input("Do you want to install HubBasePE?[Y/N] -- ").upper()
-    if hbpeInstall == "Y":
-        subprocess.run([sys.executable, "-m", "pip", "install", f"HubBasePE=={__version2__}"])
-        PlPr = "Y"
-
-
 def Setup_HubBase():  # (11.06.2026)
     global RA, VipAccess, prList, prNum
     RA = 0
@@ -954,10 +922,3 @@ def dev_console():
                     print(eval(line))
                 except SyntaxError:
                     print("Error: The syntax is not correct.")
-
-
-# (16.03.2026)
-Setup_HubBase()
-Enter()
-Code()
-dev_console()
